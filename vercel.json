@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "50mb",
+          "runtime": "python3.12"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/predict",
+        "methods": ["POST"],
+        "dest": "/app.py"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/templates/index.html"
+      }
+    ],
+    "env": {
+      "VERCEL_TOKEN": "@vercel-token"
+    }
+  }
+  
