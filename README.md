@@ -1,22 +1,78 @@
-# mlops-deployment-task
+# 🍰 Sweet or Savory Predictor
 
-# Sweet or Savory Predictor
-Welcome to the Sweet or Savory Predictor project! This web application uses a machine learning model to predict whether a food is sweet or savory based on its ingredient quantities.
+Welcome to the **Sweet or Savory Predictor**!
+This web application uses a machine learning model to classify food as **sweet** or **savory** based on ingredient quantities.
 
-## Overview
-This project includes:
-- Model Training: A machine learning model trained to classify food as sweet or savory based on ingredient quantities.
-- Flask API: A backend API built with Flask to serve predictions.
-- Frontend: A simple web interface to input ingredient data and view predictions.
+---
 
-## Project Structure
-- `app.py`: The main Flask application file that serves the API endpoints.
-- `model.py`: The script to train and save the machine learning model.
-- `index.html`: The HTML file for the frontend interface.
-- `requirements.txt`: A file listing the project dependencies.
-- `.gitignore`: Specifies files and directories to be ignored by Git.
+## 🧠 Project Overview
 
-## How to Use
-- Enter Ingredient Quantities: In the web form, input the quantities of ingredients (flour, sugar, salt, butter) in grams, separated by commas.
-- Submit Form: Click the "Predict" button to send the data to the server.
-- View Prediction: The result will be displayed below the form, showing whether the food is predicted to be sweet or savory.
+This project demonstrates end-to-end model deployment using a simple web interface and Flask API.
+
+### Components:
+
+* **Model Training:** Classifies foods based on ingredients like flour, sugar, salt, and butter
+* **Flask API:** Serves predictions via HTTP requests
+* **Frontend:** Simple HTML form to input ingredient values and view results
+
+---
+
+## 🗂 Project Structure
+
+```
+mlops-deployment-task/
+├── app.py            # Flask application
+├── model.py          # ML model training and serialization
+├── index.html        # Frontend interface
+├── requirements.txt  # Python dependencies
+└── .gitignore        # Git ignored files
+```
+
+---
+
+## 🚀 How to Use
+
+1. **Input Ingredients**
+   Enter quantities (in grams) for:
+
+   * Flour
+   * Sugar
+   * Salt
+   * Butter
+
+   Format: `e.g., 100, 50, 5, 20`
+
+2. **Click "Predict"**
+   Submits data to the Flask backend
+
+3. **View Prediction**
+   The app will display either:
+
+   * **Sweet** 🍬
+   * **Savory** 🧂
+
+---
+
+## 💻 Setup Instructions
+
+```bash
+# Clone the repo
+git clone https://github.com/Ushna-Nadeem/mlops-deployment-task.git
+cd mlops-deployment-task
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+python app.py
+```
+
+Open `http://localhost:5000` in your browser to access the app.
+
+---
+
+## ✅ Features
+
+* Real-time predictions
+* Lightweight and easy to deploy
+* Modular code structure for extension
